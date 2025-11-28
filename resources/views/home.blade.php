@@ -25,6 +25,9 @@
         <div class="particle"></div>
     </div>
 
+    <!-- Drag background for color transition -->
+    <div id="drag-background" class="absolute inset-0 pointer-events-none" style="z-index: 1;"></div>
+
     <div class="container mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row items-center justify-between">
             <!-- Left side: Profile -->
@@ -82,10 +85,10 @@
                     </a>
                 </div>
 
-                <!-- Hire Me Button -->
+                <!-- Contact Me Button -->
                 <div class="fade-in-up">
                     <a href="#contact" class="hire-btn inline-block">
-                        Hire Me
+                        Contact Me
                     </a>
                 </div>
             </div>
@@ -716,6 +719,113 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', revealContact);
     revealContact(); // Initial check
+
+    // Drag functionality for image container
+    const imageContainer = document.querySelector('.image-container');
+    const dragBackground = document.getElementById('drag-background');
+    let isDragging = false;
+    let startY = 0;
+    let currentY = 0;
+    let dragDistance = 0;
+    const maxDrag = 200; // overdrag limit
+
+    function getClientY(e) {
+        return e.touches ? e.touches[0].clientY : e.clientY;
+    }
+
+    function startDrag(e) {
+        isDragging = true;
+        startY = getClientY(e);
+        imageContainer.style.transition = 'none';
+        dragBackground.style.transition = 'none';
+        e.preventDefault();
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        currentY = getClientY(e);
+        dragDistance = Math.max(0, currentY - startY);
+        let effectiveDrag = Math.min(dragDistance, maxDrag);
+        imageContainer.style.transform = `translateY(-${effectiveDrag}px)`;
+        const progress = Math.min(dragDistance / maxDrag, 1);
+        const red = Math.floor(progress * 255);
+        const green = Math.floor(progress * 100);
+        const blue = Math.floor(progress * 150);
+        dragBackground.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${progress * 0.5})`;
+        e.preventDefault();
+    }
+
+    function endDrag() {
+        if (!isDragging) return;
+        isDragging = false;
+        // Snap back with spring animation
+        imageContainer.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        imageContainer.style.transform = 'translateY(0px)';
+        dragBackground.style.transition = 'background-color 0.6s ease';
+        dragBackground.style.backgroundColor = '';
+        // Remove transitions after animation
+        setTimeout(() => {
+            imageContainer.style.transition = '';
+            dragBackground.style.transition = '';
+        }, 600);
+    }
+
+    // Mouse events
+    imageContainer.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', endDrag);
+
+    // Touch events
+    imageContainer.addEventListener('touchstart', startDrag, {
+        passive: false
+    });
+    document.addEventListener('touchmove', drag, {
+        passive: false
+    });
+    document.addEventListener('touchend', endDrag);
+
+    // Name animation interaction
+    const nameElement = document.querySelector('.name-gradient');
+    let isAnimating = false;
+
+    function triggerNameAnimation() {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        // Jump upward with physics-based motion (soft bounce)
+        nameElement.style.transition = 'transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+        nameElement.style.transform = 'translateY(-15px)';
+
+        // Disappear with scale-out motion
+        setTimeout(() => {
+            nameElement.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
+            nameElement.style.transform = 'translateY(-15px) scale(0.8)';
+            nameElement.style.opacity = '0';
+        }, 200);
+
+        // After delay, return with physics-based animation (elastic rebound)
+        setTimeout(() => {
+            nameElement.style.transition =
+                'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), opacity 0.4s ease-in';
+            nameElement.style.transform = 'translateY(0px) scale(1)';
+            nameElement.style.opacity = '1';
+
+            // Reset after animation completes
+            setTimeout(() => {
+                nameElement.style.transition = '';
+                isAnimating = false;
+            }, 800);
+        }, 600);
+    }
+
+    // Mouse event
+    nameElement.addEventListener('click', triggerNameAnimation);
+
+    // Touch event
+    nameElement.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        triggerNameAnimation();
+    });
 });
 </script>
 @endsection

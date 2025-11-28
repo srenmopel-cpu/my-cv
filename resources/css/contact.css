@@ -1,0 +1,350 @@
+.contact-section {
+    background: linear-gradient(135deg, #0d0d0d 0%, #111 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(232, 73, 73, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(232, 73, 73, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(232, 73, 73, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.neon-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.neon-line {
+    position: absolute;
+    background: linear-gradient(45deg, transparent, rgba(232, 73, 73, 0.3), transparent);
+    height: 2px;
+    animation: moveLine 8s linear infinite;
+}
+
+.neon-line:nth-child(1) {
+    top: 20%;
+    left: -100%;
+    width: 100%;
+    animation-delay: 0s;
+}
+
+.neon-line:nth-child(2) {
+    top: 40%;
+    left: -100%;
+    width: 100%;
+    animation-delay: 2s;
+}
+
+.neon-line:nth-child(3) {
+    top: 60%;
+    left: -100%;
+    width: 100%;
+    animation-delay: 4s;
+}
+
+.neon-line:nth-child(4) {
+    top: 80%;
+    left: -100%;
+    width: 100%;
+    animation-delay: 6s;
+}
+
+@keyframes moveLine {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background: rgba(232, 73, 73, 0.5);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    width: 4px;
+    height: 4px;
+    animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+    top: 20%;
+    left: 80%;
+    width: 6px;
+    height: 6px;
+    animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+    top: 70%;
+    left: 20%;
+    width: 3px;
+    height: 3px;
+    animation-delay: 2s;
+}
+
+.particle:nth-child(4) {
+    top: 50%;
+    left: 90%;
+    width: 5px;
+    height: 5px;
+    animation-delay: 3s;
+}
+
+.particle:nth-child(5) {
+    top: 80%;
+    left: 60%;
+    width: 4px;
+    height: 4px;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 1;
+    }
+}
+
+.contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #fff;
+}
+
+.contact-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #ccc;
+}
+
+.neon-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.neon-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #E84949, transparent);
+    box-shadow: 0 0 10px rgba(232, 73, 73, 0.8);
+    animation: expandUnderline 2s ease-out forwards;
+}
+
+@keyframes expandUnderline {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 200px;
+    }
+}
+
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(232, 73, 73, 0.3);
+    box-shadow: 0 0 30px rgba(232, 73, 73, 0.2);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-form-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #E84949, transparent, #E84949);
+    border-radius: 22px;
+    z-index: -1;
+    animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.contact-input {
+    width: 100%;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.contact-input::placeholder {
+    color: #888;
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: #E84949;
+    box-shadow: 0 0 20px rgba(232, 73, 73, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.contact-textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.contact-submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(45deg, #E84949, #ff6b6b);
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(232, 73, 73, 0.5);
+}
+
+.contact-submit-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(232, 73, 73, 0.8);
+}
+
+.contact-info-box {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(232, 73, 73, 0.3);
+    padding: 2rem;
+    box-shadow: 0 0 30px rgba(232, 73, 73, 0.2);
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+    transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+    color: #E84949;
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    fill: currentColor;
+    filter: drop-shadow(0 0 10px rgba(232, 73, 73, 0.5));
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #E84949;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-layout {
+        flex-direction: column;
+    }
+
+    .contact-form-card,
+    .contact-info-box {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Scroll reveal animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}

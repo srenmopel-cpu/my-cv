@@ -15,17 +15,12 @@
         <div class="navbar-container">
             <div class="logo">Mopel</div>
             <ul class="nav-menu">
-                <li><a href="{{ url('/') }}" class="nav-link {{ request()->is('/') ? 'active' : '' }}">Home</a></li>
-                <li><a href="{{ url('/services') }}"
-                        class="nav-link {{ request()->is('services') ? 'active' : '' }}">Services</a></li>
-                <li><a href="{{ url('/skills') }}"
-                        class="nav-link {{ request()->is('skills') ? 'active' : '' }}">Skills</a></li>
-                <li><a href="{{ url('/education') }}"
-                        class="nav-link {{ request()->is('education') ? 'active' : '' }}">Education</a></li>
-                <li><a href="{{ url('/experience') }}"
-                        class="nav-link {{ request()->is('experience') ? 'active' : '' }}">Experience</a></li>
-                <li><a href="{{ url('/contact') }}"
-                        class="nav-link {{ request()->is('contact') ? 'active' : '' }}">Contact</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -40,12 +35,12 @@
     <div class="mobile-menu-overlay">
         <div class="mobile-menu">
             <ul>
-                <li><a href="{{ url('/') }}" class="mobile-nav-link">Home</a></li>
-                <li><a href="{{ url('/services') }}" class="mobile-nav-link">Services</a></li>
-                <li><a href="{{ url('/skills') }}" class="mobile-nav-link">Skills</a></li>
-                <li><a href="{{ url('/education') }}" class="mobile-nav-link">Education</a></li>
-                <li><a href="{{ url('/experience') }}" class="mobile-nav-link">Experience</a></li>
-                <li><a href="{{ url('/contact') }}" class="mobile-nav-link">Contact</a></li>
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+                <li><a href="#education" class="mobile-nav-link">Education</a></li>
+                <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
             </ul>
         </div>
     </div>

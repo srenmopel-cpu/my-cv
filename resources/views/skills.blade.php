@@ -91,7 +91,7 @@
 
             <div class="flex flex-col items-center">
                 <div class="skill-icon">
-                    <span>{ }</span>
+                    <span>{HTML}</span>
                 </div>
                 <div class="skill-name">CSS</div>
             </div>

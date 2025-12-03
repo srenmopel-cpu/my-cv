@@ -3,14 +3,6 @@
 @section('title', 'Home - Portfolio')
 
 @section('content')
-@push('styles')
-@vite(['resources/css/home.css'])
-@vite(['resources/css/services.css'])
-@vite(['resources/css/skills.css'])
-@vite(['resources/css/education.css'])
-@vite(['resources/css/experience.css'])
-@vite(['resources/css/contact.css'])
-@endpush
 
 <section id="home" class="hero min-h-screen flex items-center relative">
     <!-- Floating particles -->
@@ -23,6 +15,9 @@
         <div class="particle"></div>
         <div class="particle"></div>
         <div class="particle"></div>
+        <div class="spark"></div>
+        <div class="spark"></div>
+        <div class="spark"></div>
     </div>
 
     <!-- Drag background for color transition -->
@@ -40,21 +35,16 @@
             </div>
 
             <!-- Right side: Text -->
-            <div class="md:w-1/2 text-center md:text-left">
+            <div class="md:w-1/2 text-center">
                 <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in-up">
-                    Hi, It's <span class="name-gradient">Mopel</span>
+                    Hi, It's <span class="name-gradient">MOPEL</span>
                 </h1>
                 <h2 class="text-2xl md:text-4xl font-semibold mb-6 fade-in-up role-gradient">
-                    I'm a Web Developer
+                    I'm a <span id="role-text"></span>
                 </h2>
-                <p class="text-gray-300 text-lg mb-6 max-w-md fade-in-up">
-                    Passionate web developer crafting modern, dynamic, and user-friendly websites. Transforming ideas
-                    into functional digital experiences that deliver real value to users around the world.
-                </p>
-                <p class="text-gray-400 text-base mb-8 max-w-md fade-in-up">
-                    With over 5 years of experience in web development and system design, I bring creativity and
-                    technical expertise to every project—building responsive interfaces, clean code structures, and
-                    scalable web applications.
+                <p class="text-gray-400 text-lg mb-8 max-w-md fade-in-up description-glow">
+                    Passionate developer crafting innovative digital experiences with cutting-edge technologies.
+                    Transforming ideas into reality through clean code and creative design.
                 </p>
 
                 <!-- Social Media Icons -->
@@ -85,10 +75,10 @@
                     </a>
                 </div>
 
-                <!-- Contact Me Button -->
+                <!-- Hire Me Button -->
                 <div class="fade-in-up">
                     <a href="#contact" class="hire-btn inline-block">
-                        Contact Me
+                        Hire Me
                     </a>
                 </div>
             </div>
@@ -100,6 +90,26 @@
 
 <!-- Services Section -->
 <section id="services" class="services-section">
+    <!-- Floating particles -->
+    <div class="services-particles">
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-particle"></div>
+        <div class="services-spark"></div>
+        <div class="services-spark"></div>
+        <div class="services-spark"></div>
+        <div class="services-spark"></div>
+        <div class="services-spark"></div>
+    </div>
+
+    <!-- Holographic grid overlay -->
+    <div class="services-hologram-grid"></div>
+
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
             <h1 class="text-5xl md:text-6xl font-bold text-white title-glow mb-4">
@@ -189,6 +199,33 @@
 
 <!-- Skills Section -->
 <section id="skills" class="skills-section py-20">
+    <!-- Hologram Grid Overlay -->
+    <div class="hologram-grid"></div>
+
+    <!-- Nebula Mist -->
+    <div class="nebula-mist"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <!-- Additional sparks -->
+        <div class="spark spark-1"></div>
+        <div class="spark spark-2"></div>
+        <div class="spark spark-3"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
     <div class="container mx-auto px-4 relative z-10">
         <div class="text-center mb-16">
             <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -265,14 +302,14 @@
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-4xl mx-auto reveal">
             <div class="flex flex-col items-center">
                 <div class="skill-icon">
-                    <span></></span>
+                    <span>{HTML}</span>
                 </div>
                 <div class="skill-name">HTML</div>
             </div>
 
             <div class="flex flex-col items-center">
                 <div class="skill-icon">
-                    <span>{ }</span>
+                    <span>{}</span>
                 </div>
                 <div class="skill-name">CSS</div>
             </div>
@@ -402,98 +439,149 @@
 </section>
 
 <!-- Experience Section -->
-<section id="experience" class="experience-section py-20"
-    style="background: linear-gradient(135deg, #0d0d0d, #111); position: relative; overflow: hidden;">
+<section id="experience" class="experience-section">
+    <!-- Hologram Grid Overlay -->
+    <div class="hologram-grid"></div>
+
+    <!-- Nebula Mist -->
+    <div class="nebula-mist"></div>
+
+    <!-- Floating Particles -->
+    <div class="particles">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <!-- Additional sparks -->
+        <div class="spark spark-1"></div>
+        <div class="spark spark-2"></div>
+        <div class="spark spark-3"></div>
+    </div>
+
     <div class="container mx-auto px-4">
-        <h1 class="text-5xl font-bold text-center text-white mb-4" style="text-shadow: 0 0 10px #ff0000;">Experience
-        </h1>
-        <h2 class="text-xl text-center text-red-400 mb-8" style="text-shadow: 0 0 5px #ff0000;">My Professional Journey
-        </h2>
-        <div class="divider mx-auto mb-16"
-            style="width: 200px; height: 2px; background: #ff0000; box-shadow: 0 0 10px #ff0000;"></div>
+        <!-- Header -->
+        <div class="header-container">
+            <!-- Volumetric Haze -->
+            <div class="volumetric-haze"></div>
 
-        <div class="timeline reveal">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="year">2021–Present</div>
-                    <div class="card">
-                        <h3>Web Developer</h3>
-                        <p class="company">Tech Innovations Inc.</p>
-                        <p class="description">Developed modern web applications using Laravel, React, and Node.js. Led
-                            a team of 5 developers in delivering scalable solutions for enterprise clients.</p>
+            <!-- Scanning HUD Rings -->
+            <div class="scanning-rings">
+                <div class="scanning-ring scanning-ring-1"></div>
+                <div class="scanning-ring scanning-ring-2"></div>
+                <div class="scanning-ring scanning-ring-3"></div>
+            </div>
+
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <h1 class="experience-title">Experience</h1>
+            <h2 class="experience-subtitle">My Professional Journey</h2>
+            <div class="neon-underline"></div>
+        </div>
+
+        <!-- Futuristic Timeline -->
+        <div class="futuristic-timeline">
+            <div class="timeline-line"></div>
+
+            <div class="timeline-node">
+                <div class="timeline-orb"></div>
+                <div class="timeline-card-container">
+                    <div class="year-text">2021–Present</div>
+                    <div class="experience-card">
+                        <div class="card-icon">💼</div>
+                        <h3 class="job-title">Web Developer</h3>
+                        <p class="company-name">Tech Innovations Inc.</p>
+                        <p class="job-description">Developed modern web applications using Laravel, React, and Node.js.
+                            Led a team of 5 developers in delivering scalable solutions for enterprise clients.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="year">2019–2021</div>
-                    <div class="card">
-                        <h3>UI/UX Designer</h3>
-                        <p class="company">Creative Studios</p>
-                        <p class="description">Designed user interfaces for mobile and web applications. Conducted user
-                            research and usability testing to improve user experience by 40%.</p>
+            <div class="timeline-node">
+                <div class="timeline-orb"></div>
+                <div class="timeline-card-container">
+                    <div class="year-text">2019–2021</div>
+                    <div class="experience-card">
+                        <div class="card-icon">💼</div>
+                        <h3 class="job-title">UI/UX Designer</h3>
+                        <p class="company-name">Creative Studios</p>
+                        <p class="job-description">Designed user interfaces for mobile and web applications. Conducted
+                            user research and usability testing to improve user experience by 40%.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="year">2018–2019</div>
-                    <div class="card">
-                        <h3>Frontend Developer</h3>
-                        <p class="company">Startup Hub</p>
-                        <p class="description">Built responsive websites using HTML, CSS, and JavaScript. Collaborated
-                            with designers to implement pixel-perfect designs.</p>
+            <div class="timeline-node">
+                <div class="timeline-orb"></div>
+                <div class="timeline-card-container">
+                    <div class="year-text">2018–2019</div>
+                    <div class="experience-card">
+                        <div class="card-icon">💼</div>
+                        <h3 class="job-title">Frontend Developer</h3>
+                        <p class="company-name">Startup Hub</p>
+                        <p class="job-description">Built responsive websites using HTML, CSS, and JavaScript.
+                            Collaborated with designers to implement pixel-perfect designs.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="year">2017–2018</div>
-                    <div class="card">
-                        <h3>Junior Web Developer</h3>
-                        <p class="company">Digital Agency</p>
-                        <p class="description">Assisted in developing client websites and learned industry best
+            <div class="timeline-node">
+                <div class="timeline-orb"></div>
+                <div class="timeline-card-container">
+                    <div class="year-text">2017–2018</div>
+                    <div class="experience-card">
+                        <div class="card-icon">💼</div>
+                        <h3 class="job-title">Junior Web Developer</h3>
+                        <p class="company-name">Digital Agency</p>
+                        <p class="job-description">Assisted in developing client websites and learned industry best
                             practices. Contributed to open-source projects and improved coding skills.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Subtle particles effect -->
-    <div class="particles"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; background: radial-gradient(circle at 20% 80%, rgba(255,0,0,0.1) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(255,0,0,0.1) 0%, transparent 50%);">
-    </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="contact-section">
-    <div class="neon-lines">
-        <div class="neon-line"></div>
-        <div class="neon-line"></div>
-        <div class="neon-line"></div>
-        <div class="neon-line"></div>
+    <!-- Hologram Grid Overlay -->
+    <div class="hologram-grid"></div>
+
+    <!-- Floating HUD Elements -->
+    <div class="floating-hud">
+        <div class="scanning-ring scanning-ring-1"></div>
+        <div class="scanning-ring scanning-ring-2"></div>
+        <div class="scanning-ring scanning-ring-3"></div>
+        <div class="rotating-polygon"></div>
+        <div class="digital-coordinates">47.6062° N, 122.3321° W</div>
     </div>
+
+    <!-- Enhanced Particles -->
     <div class="particles">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+        <div class="particle particle-5"></div>
+        <div class="holographic-spark spark-1"></div>
+        <div class="holographic-spark spark-2"></div>
+        <div class="holographic-spark spark-3"></div>
+        <div class="red-mist"></div>
     </div>
+
+    <!-- Floating Red Aura -->
+    <div class="floating-red-aura"></div>
+
     <div class="container mx-auto px-4">
         <div class="text-center mb-16 fade-in-up">
             <h1 class="contact-title">
-                <span class="neon-underline">Contact Me</span>
+                <span class="holographic-energy-bar">Contact</span>
             </h1>
-            <p class="contact-subtitle">Get In Touch</p>
+            <p class="contact-subtitle">Let's Connect</p>
+            <div class="neon-underline"></div>
         </div>
 
         @if(session('success'))
@@ -504,62 +592,22 @@
         @endif
 
         <div class="contact-layout flex gap-8 max-w-6xl mx-auto">
-            <div class="flex-1 reveal">
-                <form action="{{ url('/contact') }}" method="POST" class="contact-form-card">
-                    @csrf
-
-                    <div class="mb-6">
-                        <label for="name" class="block text-sm font-medium mb-2 text-white">Full Name</label>
-                        <input type="text" id="name" name="name" value="{{ old('name') }}" required
-                            class="contact-input" placeholder="Enter your full name">
-                        @error('name')
-                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                    <div class="mb-6">
-                        <label for="email" class="block text-sm font-medium mb-2 text-white">Email Address</label>
-                        <input type="email" id="email" name="email" value="{{ old('email') }}" required
-                            class="contact-input" placeholder="Enter your email address">
-                        @error('email')
-                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                    <div class="mb-6">
-                        <label for="subject" class="block text-sm font-medium mb-2 text-white">Subject</label>
-                        <input type="text" id="subject" name="subject" value="{{ old('subject') }}" required
-                            class="contact-input" placeholder="Enter subject">
-                        @error('subject')
-                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                    <div class="mb-8">
-                        <label for="message" class="block text-sm font-medium mb-2 text-white">Message</label>
-                        <textarea id="message" name="message" required class="contact-input contact-textarea"
-                            placeholder="Enter your message">{{ old('message') }}</textarea>
-                        @error('message')
-                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
-                        @enderror
-                    </div>
-
-                    <button type="submit" class="contact-submit-btn">
-                        Send Message
-                    </button>
-                </form>
-            </div>
-
+            <!-- Left Side: Holographic Contact Panel -->
             <div class="w-full md:w-80 reveal">
-                <div class="contact-info-box">
-                    <h3 class="text-xl font-bold mb-6 text-white">Contact Information</h3>
+                <div class="contact-info-panel">
+                    <!-- Hologram Grid Texture -->
+                    <div class="hologram-grid-texture"></div>
+
+                    <div class="contact-info-header">
+                        <h3 class="text-xl font-bold mb-6 text-white">Mopel</h3>
+                    </div>
 
                     <div class="contact-info-item">
                         <svg class="contact-icon" viewBox="0 0 24 24">
                             <path
                                 d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                         </svg>
-                        <a href="tel:+1234567890" class="contact-link">+855-818-954-70</a>
+                        <a href="tel:+855-818-954-70" class="contact-link">+855-818-954-70</a>
                     </div>
 
                     <div class="contact-info-item">
@@ -567,7 +615,7 @@
                             <path
                                 d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                         </svg>
-                        <a href="mailto:contact@example.com" class="contact-link">srenmopel@gmail.com</a>
+                        <a href="mailto:srenmopel@gmail.com" class="contact-link">srenmopel@gmail.com</a>
                     </div>
 
                     <div class="contact-info-item">
@@ -575,9 +623,85 @@
                             <path
                                 d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                         </svg>
-                        <span>phnom penh</span>
+                        <span class="contact-link">Phnom Penh</span>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="social-links mt-6">
+                        <a href="#" class="social-link" title="LinkedIn">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Twitter">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" title="Instagram">
+                            <svg fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
+            </div>
+
+            <!-- Right Side: Futuristic Contact Form -->
+            <div class="flex-1 reveal">
+                <form action="{{ url('/contact') }}" method="POST" class="contact-form-card">
+                    @csrf
+
+                    <div class="input-group mb-6">
+                        <input type="text" id="name" name="name" value="{{ old('name') }}" required
+                            class="contact-input" placeholder=" ">
+                        <label for="name" class="floating-label">Name</label>
+                        @error('name')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="input-group mb-6">
+                        <input type="email" id="email" name="email" value="{{ old('email') }}" required
+                            class="contact-input" placeholder=" ">
+                        <label for="email" class="floating-label">Email</label>
+                        @error('email')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="input-group mb-6">
+                        <input type="text" id="subject" name="subject" value="{{ old('subject') }}" required
+                            class="contact-input" placeholder=" ">
+                        <label for="subject" class="floating-label">Subject</label>
+                        @error('subject')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <div class="input-group mb-8">
+                        <textarea id="message" name="message" required class="contact-input contact-textarea"
+                            placeholder=" ">{{ old('message') }}</textarea>
+                        <label for="message" class="floating-label">Message</label>
+                        @error('message')
+                        <p class="text-red-500 text-sm mt-1">{{ $message }}</p>
+                        @enderror
+                    </div>
+
+                    <button type="submit" class="contact-submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </form>
             </div>
         </div>
     </div>
@@ -624,15 +748,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animationPlayState = 'running';
+                entry.target.classList.add('active');
             }
         });
     }, observerOptions);
 
     document.querySelectorAll('.skill-bar-fill').forEach(fill => {
-        fill.style.animationPlayState = 'paused';
         observer.observe(fill);
     });
+
+    // Skills section particle effects
+    function createSkillParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+        particle.style.width = (Math.random() * 4 + 2) + 'px';
+        particle.style.height = particle.style.width;
+        document.querySelector('#skills .particles').appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 10000);
+    }
+
+    function createSkillSpark() {
+        const spark = document.createElement('div');
+        spark.className = 'spark';
+        spark.style.left = Math.random() * 100 + '%';
+        spark.style.animationDelay = Math.random() * 4 + 's';
+        spark.style.animationDuration = (Math.random() * 2 + 4) + 's';
+        document.querySelector('#skills .particles').appendChild(spark);
+
+        setTimeout(() => {
+            spark.remove();
+        }, 8000);
+    }
+
+    // Initialize skills particles
+    setInterval(createSkillParticle, 250);
+    setInterval(createSkillSpark, 400);
 
     // Education section slide-in animations
     const slideObserver = new IntersectionObserver((entries) => {
@@ -719,6 +875,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', revealContact);
     revealContact(); // Initial check
+
+    // Contact section particle effects
+    function createContactParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        particle.style.animationDuration = (Math.random() * 4 + 6) + 's';
+        particle.style.width = (Math.random() * 3 + 2) + 'px';
+        particle.style.height = particle.style.width;
+        document.querySelector('#contact .particles').appendChild(particle);
+
+        setTimeout(() => {
+            particle.remove();
+        }, 10000);
+    }
+
+    function createContactSpark() {
+        const spark = document.createElement('div');
+        spark.className = 'holographic-spark';
+        spark.style.left = Math.random() * 100 + '%';
+        spark.style.animationDelay = Math.random() * 4 + 's';
+        spark.style.animationDuration = (Math.random() * 2 + 4) + 's';
+        document.querySelector('#contact .particles').appendChild(spark);
+
+        setTimeout(() => {
+            spark.remove();
+        }, 8000);
+    }
+
+    // Initialize contact particles
+    setInterval(createContactParticle, 300);
+    setInterval(createContactSpark, 500);
 
     // Drag functionality for image container
     const imageContainer = document.querySelector('.image-container');
@@ -826,6 +1015,32 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         triggerNameAnimation();
     });
+
+    // Typing animation for role
+    const roleText = "Developer";
+    const roleElement = document.getElementById('role-text');
+    let index = 0;
+    let typingSpeed = 150; // ms per character
+
+    function typeWriter() {
+        if (index < roleText.length) {
+            roleElement.innerHTML += roleText.charAt(index);
+            index++;
+            setTimeout(typeWriter, typingSpeed);
+        } else {
+            // Add blinking cursor after typing
+            roleElement.innerHTML += '<span class="cursor">|</span>';
+            setInterval(() => {
+                const cursor = roleElement.querySelector('.cursor');
+                if (cursor) {
+                    cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+                }
+            }, 500);
+        }
+    }
+
+    // Start typing after a delay
+    setTimeout(typeWriter, 1000);
 });
 </script>
 @endsection

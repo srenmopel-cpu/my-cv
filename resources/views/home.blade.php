@@ -2,6 +2,10 @@
 
 @section('title', 'Home - Portfolio')
 
+@push('styles')
+@vite('resources/css/home.css')
+@endpush
+
 @section('content')
 
 <section id="home" class="hero min-h-screen flex items-center relative">

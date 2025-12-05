@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    @vite(['resources/css/app.css', 'resources/css/navbar.css', 'resources/css/home.css', 'resources/css/education.css',
+    @vite(['resources/css/app.css', 'resources/css/navbar.css', 'resources/css/education.css',
     'resources/css/experience.css', 'resources/css/skills.css', 'resources/css/contact.css',
     'resources/css/services.css', 'resources/js/app.js'])
     @stack('styles')

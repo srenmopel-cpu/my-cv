@@ -3,7 +3,6 @@
 @section('title', 'Home - Portfolio')
 
 @push('styles')
-@vite('resources/css/home.css')
 @endpush
 
 @section('content')

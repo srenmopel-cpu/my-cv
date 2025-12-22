@@ -2,10 +2,7 @@
 .hero {
     position: relative;
     overflow: hidden;
-    background:
-        linear-gradient(135deg, #080808 0%, #0d0d0d 50%, #080808 100%),
-        radial-gradient(circle at 30% 20%, rgba(255, 0, 0, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(255, 0, 0, 0.06) 0%, transparent 50%);
+    background: #080808;
     min-height: 100vh;
     color: #ffffff;
     perspective: 1000px;
@@ -302,9 +299,27 @@
     box-shadow:
         0 0 50px rgba(232, 73, 73, 0.3),
         0 20px 60px rgba(0, 0, 0, 0.5),
-        inset 0 0 50px rgba(232, 73, 73, 0.1);
+        inset 0 0 50px rgba(232, 73, 73, 0.1),
+        0 0 0 20px rgba(220, 20, 60, 0.1);
+    /* diffused shadow */
     animation: rotateGlowLarge 12s linear infinite;
     overflow: hidden;
+    filter: drop-shadow(0 10px 30px rgba(220, 20, 60, 0.3));
+}
+
+.hero-profile-large::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, rgba(255, 20, 147, 0.6), rgba(220, 20, 60, 0.7), rgba(255, 105, 180, 0.5), rgba(255, 20, 147, 0.6));
+    animation: rotateGlowRing 12s linear infinite;
+    opacity: 0.4;
+    filter: blur(12px);
+    z-index: -1;
 }
 
 .hero-profile-large::after {
@@ -366,6 +381,16 @@
             0 0 50px rgba(232, 73, 73, 0.3),
             0 20px 60px rgba(0, 0, 0, 0.5),
             inset 0 0 50px rgba(232, 73, 73, 0.1);
+    }
+}
+
+@keyframes rotateGlowRing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -701,4 +726,157 @@
 
 .description-glow {
     text-shadow: 0 0 10px rgba(232, 73, 73, 0.3), 0 0 20px rgba(255, 105, 180, 0.2);
+}
+
+/* Futuristic Hero Role Text */
+.hero-role-text {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ffb6c1, #dc143c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(220, 20, 60, 0.5), 0 0 20px rgba(255, 182, 193, 0.3), 0 0 30px rgba(220, 20, 60, 0.2);
+    animation: roleGlow 3s ease-in-out infinite alternate;
+    transition: all 0.5s ease-in-out;
+}
+
+@keyframes roleGlow {
+    0% {
+        filter: brightness(1) drop-shadow(0 0 5px rgba(220, 20, 60, 0.3));
+    }
+
+    100% {
+        filter: brightness(1.1) drop-shadow(0 0 15px rgba(220, 20, 60, 0.6));
+    }
+}
+
+/* Typing cursor */
+.hero-role-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+    color: #dc143c;
+    text-shadow: 0 0 5px rgba(220, 20, 60, 0.5);
+}
+
+/* Animation classes for role changes */
+.role-typing {
+    animation: typingBounce 0.1s ease-in-out;
+}
+
+.role-deleting {
+    animation: deletingFade 0.5s ease-in-out;
+}
+
+.role-changing {
+    animation: roleChangeLift 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes typingBounce {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes deletingFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: scale(0.98);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+}
+
+@keyframes roleChangeLift {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    25% {
+        transform: translateY(-10px) scale(1.05);
+        opacity: 0.9;
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.1);
+        opacity: 0.8;
+    }
+
+    75% {
+        transform: translateY(-10px) scale(1.05);
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Glow pulse on change */
+.role-pulse {
+    animation: glowPulse 0.6s ease-in-out;
+}
+
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 10px rgba(220, 20, 60, 0.5), 0 0 20px rgba(255, 182, 193, 0.3), 0 0 30px rgba(220, 20, 60, 0.2);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(220, 20, 60, 0.8), 0 0 40px rgba(255, 182, 193, 0.5), 0 0 60px rgba(220, 20, 60, 0.4);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(220, 20, 60, 0.5), 0 0 20px rgba(255, 182, 193, 0.3), 0 0 30px rgba(220, 20, 60, 0.2);
+    }
+}
+
+/* Image pulse synchronized with text */
+.image-pulse {
+    animation: imageGlowPulse 0.6s ease-in-out;
+}
+
+@keyframes imageGlowPulse {
+    0% {
+        box-shadow:
+            0 0 50px rgba(232, 73, 73, 0.3),
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 0 50px rgba(232, 73, 73, 0.1),
+            0 0 0 20px rgba(220, 20, 60, 0.1);
+        filter: drop-shadow(0 10px 30px rgba(220, 20, 60, 0.3));
+    }
+
+    50% {
+        box-shadow:
+            0 0 80px rgba(232, 73, 73, 0.6),
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 0 80px rgba(255, 105, 180, 0.2),
+            0 0 0 30px rgba(220, 20, 60, 0.2);
+        filter: drop-shadow(0 10px 50px rgba(220, 20, 60, 0.5));
+    }
+
+    100% {
+        box-shadow:
+            0 0 50px rgba(232, 73, 73, 0.3),
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 0 50px rgba(232, 73, 73, 0.1),
+            0 0 0 20px rgba(220, 20, 60, 0.1);
+        filter: drop-shadow(0 10px 30px rgba(220, 20, 60, 0.3));
+    }
 }
